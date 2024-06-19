@@ -18,6 +18,11 @@ function addBook() {
         alert('Please fill in all fields correctly.');
     }
 }
+let n=books.length;
+function del(){
+  books.splice(n-1,1);
+  showbooks()
+}
 function showbooks() {
     const booksDiv = books.map((book, index) => `<h1>book Number: ${index + 1}</h1>
         <p><strong>Book Name: </strong>${book.name}</p>
